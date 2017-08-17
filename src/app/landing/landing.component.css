@@ -1,0 +1,24 @@
+.testimonials {
+  padding-top: 80px;
+  padding-bottom: 90px;
+  background-color: #1ab394;
+  background-image: url('../../assets/img/landing/avatar_all.png');
+}
+.paktestimonials {
+  padding-top: 80px;
+  padding-bottom: 90px;
+/*  background-color: #1ab394;
+*/  background-image: url('../../assets/img/pakistan.png');
+background-repeat: no-repeat;
+background-position: center;
+}
+.paktext{
+	background-color:rgba(255, 255, 255, 0.51);
+	color:black;
+	padding:30px;
+	padding-bottom: 231px;
+}
+
+.bgx{
+  background-image:url('../../assets/img/colorbanner.jpg');
+}

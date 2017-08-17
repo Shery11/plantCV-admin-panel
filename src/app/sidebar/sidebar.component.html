@@ -1,0 +1,38 @@
+
+<nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="./assets/img/profile_small.jpg" />
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Agriculturist <b class="caret"></b></span> </span> </a>
+                       
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+                <li routerLinkActive="active">
+                    <a [routerLink]="['/dashboard/home']"  ><i class="fa fa fa-leaf"></i> <span class="nav-label">Soil</span></a>
+                   
+                   
+                </li>
+                <li routerLinkActive="active">
+                    <a [routerLink]="['/dashboard/profile']" ><i class="fa fa-tree"></i> <span class="nav-label">Diseses</span></a>
+                </li>
+               
+                 <li routerLinkActive="active">
+                    <a (click)="logOut()" ><i class="fa fa-sign-out"></i> <span class="nav-label">Logout</span></a>
+                   
+                </li>
+               
+            </ul>
+
+        </div>
+    </nav>
+
+   
+

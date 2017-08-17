@@ -1,0 +1,37 @@
+<div class="gray-bg">
+	<div class="middle-box text-center loginscreen animated fadeInDown">
+	        <div style="padding-bottom: 100px">
+	           
+
+	                <h1 class="logo-name">FYP</h1>
+
+	            <h3>Welcome to Plant CV</h3>
+	            <p>Login to access admin panel</p>
+
+	           <span class="badge-danger" *ngIf="error">{{ error }}</span>
+
+	            <form class="m-t" role="form" #userForm = "ngForm" (ngSubmit) = "onSubmit(userForm.value)" >
+	                <div class="form-group">
+	                  <input type="email" class="form-control" placeholder="Email" required="" name="email" ngModel>
+	                </div>
+	                <div class="form-group">
+	                    <input type="password" class="form-control" placeholder="Password" required="" name="password" ngModel>
+	                </div>
+	                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+
+	                <a href="#"><small>Forgot password?</small></a>
+	             
+	            </form>
+	            <p class="m-t" style="padding-bottom: 35px;"> <small>Atrix Digital solutions &copy; 2017</small> </p>
+
+
+
+	        </div>
+             
+              
+	    </div>
+
+
+
+	    
+</div>
