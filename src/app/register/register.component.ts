@@ -23,8 +23,10 @@ export class RegisterComponent implements OnInit {
   	
     this.authService.signup(value.email, value.password)
     .then( res=>{
-       console.log(res.uid);
-       this.router.navigateByUrl('/login');
+
+       res.sendEmailVerification();
+       console.log(res);
+       // this.router.navigateByUrl('/login');
 
     }).catch(err => {
     

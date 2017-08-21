@@ -15,6 +15,8 @@ import {CookieService } from 'ngx-cookie';
 export class LoginComponent implements OnInit {
 
 	error;
+  bar;
+
  
   ngOnInit() {
   }
@@ -23,10 +25,18 @@ export class LoginComponent implements OnInit {
    constructor(public authService: AuthService,private router:Router,private cookie : CookieService) {}
 
 	  onSubmit(value) {
+
+      this.bar = true
 	    
 	    this.authService.login(value.email, value.password).then(res => {
-        this.router.navigateByUrl('/dashboard');
-        console.log(res.uid);
+       if(res.emailVerified) {
+          this.router.navigateByUrl('/dashboard');
+          this.cookie.put('token',res.uid);
+        }else{
+          throw new Error("Please verify your email by clicking the link in your inbox " + value.email);
+        }
+        
+        console.log(res.emailVerified);
 
         this.cookie.put('token',res.uid);
 
@@ -36,6 +46,8 @@ export class LoginComponent implements OnInit {
        
       })
       .catch(err => {
+
+        this.bar = false;
 
         this.error = err.message
         setTimeout(()=>{

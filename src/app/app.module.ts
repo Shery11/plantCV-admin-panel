@@ -11,16 +11,11 @@ import { CookieModule } from 'ngx-cookie';
 // components
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule }  from '@angular/platform-browser/animations';
-import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
-import { LandingComponent } from './landing/landing.component';
-import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { EventComponent } from './event/event.component';
-import { StartupComponent } from './startup/startup.component';
 import { AboutComponent } from './about/about.component';
 import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.component';
 import { LoginComponent } from './login/login.component';
@@ -50,16 +45,11 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent,
     DashboardComponent,
     HomeComponent,
     ProfileComponent,
-    LandingComponent,
-    HeaderComponent,
     SidebarComponent,
     PageNotFoundComponent,
-    EventComponent,
-    StartupComponent,
     AboutComponent,
     DashboardHeaderComponent,
     LoginComponent,
@@ -77,7 +67,7 @@ export const firebaseConfig = {
     RouterModule.forRoot([
        {
           path:'',
-          redirectTo:'login',
+          redirectTo:'register',
           pathMatch: 'full'
        },
        {
@@ -100,14 +90,6 @@ export const firebaseConfig = {
               component : ProfileComponent
             },
             {
-              path: 'events',
-              component: EventComponent
-            },
-            {
-              path : 'startups',
-              component : StartupComponent
-            },
-            {
               path: 'about',
               component : AboutComponent
             },
@@ -116,6 +98,10 @@ export const firebaseConfig = {
         {
           path : 'login',
           component : LoginComponent
+        },
+         {
+          path : 'register',
+          component : RegisterComponent
         },
        { path: '**', 
          component: PageNotFoundComponent 

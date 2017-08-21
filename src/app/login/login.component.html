@@ -18,13 +18,22 @@
 	                    <input type="password" class="form-control" placeholder="Password" required="" name="password" ngModel>
 	                </div>
 	                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
-
+                      
+                    <div class="progress" *ngIf= "bar">
+					  <div class="progress-bar progress-bar-striped active" role="progressbar"
+					  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+					    logging in
+					  </div>
+					</div>                   
+ 
 	                <a href="#"><small>Forgot password?</small></a>
 	             
 	            </form>
+	                
+
 	            <p class="m-t" style="padding-bottom: 35px;"> <small>Atrix Digital solutions &copy; 2017</small> </p>
 
-
+               
 
 	        </div>
              
